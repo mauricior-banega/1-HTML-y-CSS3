@@ -1,0 +1,105 @@
+<!DOCTYPE HTML> <!-- Esta es la declaracion para HTML 5, de esta manera le decimos al navegador que el documento es HTML. -->
+
+<html> <!-- Estructura basica de una pagina -->
+<head>
+</head>
+
+
+<body>
+
+	<header> <!-- Metodo que va informacion que deba estar en la cabecera visual, cabecera de la pagina.-->
+
+		
+		<h1> Titulo <wbr> de la <wbr> web </h1>	
+
+		<!-- ACLARACION: Uno de los videos comenta que meter en una palabra <wbr> sirve para cuando acortamos la pagina web de tamaño, las palabras largas no se cortan, sino ponemos este metodo dentro de palabras asi. Por eso en el ejemplo de arriba "Ttitulo de la web" pusimos wbr entre medio para poder visualizarlo (abrir pagina guardada en Firefox y achicarla para poder ver el efecto).-->
+
+			<nav>
+				<ul> <!-- Metodo de navegacion, puede ser esta etiqueta no ordenada. Y creamos distintos enlaces de lista "<li>"-->
+
+					<li> Enlace 1 </li>
+					<li> Enlace 2 </li>
+					<li> Enlace 3 </li>
+					<li> Enlace 4 </li>
+
+				</ul>
+            </nav>
+
+
+
+	</header>
+
+	
+
+
+
+
+	<section> <!-- Introduce secciones dentro de una pagina web -->
+
+
+
+    Contenido de la web <br> <!-- Metodo que sirve para separa una linea de la otra, osea baja en la pagina lo siguiente que se escribe -->
+
+    
+    <article>
+    		<h2>Titulo del articulo</h2>
+    		<p>Contenido</p>
+
+    		<!-- Expresaremos el atributo "time" de distintas formas para indicar al navegador que lo que introducimos es tiempo/fecha; a continuacion algunos ejemplos: -->
+
+    		Hoy es <time>2022/03/07</time> <br> <!-- BR - Sirve para bajar al siguiente renglon el posterior codigo-->
+    		<time datetime="2022/03/07">Hoy</time> voy a un concierto
+
+    </article>
+
+
+
+    <aside> <!-- Estructura el cuerpo del contenido de la web -->
+     <h3>Contenido tangencial</h3> 
+     <p>Texto texto</p>
+    </aside>
+
+
+
+    			<div itemscope itemtype="http://data-vocary.org/Person"> <!-- Creamos ahora un div que contendra Microdatos, que aportara al navegador informacion del tipo de dato que estamos expresando. Le decimos a itescope que saque los datos de una pagina que ya tiene definicion de datos. Si cargamos la pagina veremos los tipos de datos que tiene. Ya que si los dejamos sin lo que llamamos "itemprop" (atravez de la etiqueta "span" encerrando cada palabra, el navegador no sabra interpretar que tipo de dato seria.)-->
+
+
+    			Me llamo <span itemprop="name"> Mauricio Banega </span> <br>
+    			Me llaman <span itemprop="nickname"> Cara de poio </span> <br>
+    			Trabajo en un <span itemprop="title">Callcenter - Telemarketer </span> <br>
+    			Mi web es <span itemprop="url"> http://www.mb.com.ar </span> <br>
+    			Tengo un amigo que se llama <span itemprop="friend"> Maxi </span> <br><br>
+
+
+
+
+
+    			</div>
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+	<footer> <!-- Pie de pagina, para dar datos de Copyrigt/Numero de pagina, etc. -->
+	 Pie de pagina
+	</footer>
+
+
+
+
+
+</body>
+
+</html>
+
+<!-- -->

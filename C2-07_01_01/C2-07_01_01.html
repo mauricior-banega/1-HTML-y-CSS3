@@ -1,0 +1,46 @@
+<html>	<!-- HTML y CSS3 - Capitulo 2 (Video 7): 07_01_03 - Bordes Rendondeados: Crearemos una oracion que dira "Este es un texto dentro de un cuadro redondeado", el tendra un fondo gris y un cuadro redondeado sobre el. Ademas le agregamos "-moz-" para que los bordes sean compatibles con Mozilla Firefox. --> 
+
+
+	<head>
+
+		<style type="text/css">
+
+			div {
+
+				border: 1px solid black;
+				padding 10px 40px;
+				background: #cecece;
+				width: 400px;
+				
+				/*border-radius:10px; */
+
+				/* Desde aca, si dejamos un solo valor de pixel este se aplica a los 4 vertices, pero si ponemos 2 valores, cada uno se aplican a 2 de los 4 vertices y si ponemos como dejarelos en el ejemplo, 4 valores de pixeles cada uno se asignara a uno de los 4 vertices.*/
+
+				border-radius:20px 5px 10px 0px;
+
+				-moz-border-radius: 20px 5px 10px 0px; /*Compatibilidad con Firefox */
+
+			    }
+
+		</style>
+
+	</head>
+
+
+
+	<body>
+       
+  
+					<div>Este es un texto dentro de un cuadro redondeado
+
+					<br>Este es un texto dentro de un cuadro redondeado
+					<br>Este es un texto dentro de un cuadro redondeado
+					<br>Este es un texto dentro de un cuadro redondeado
+
+					</div>  <!-- Haremos varias oraciones solo para ver como quedan todas dentro del mismo rectandulo redondeado. --> 
+
+	<body>
+
+
+
+</html>	 

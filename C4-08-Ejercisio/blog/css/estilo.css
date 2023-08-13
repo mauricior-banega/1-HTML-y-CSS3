@@ -1,0 +1,681 @@
+/* Fuentes personalizadas */
+
+/* ACLARACION: Por alguna razon la fuente ubuntu-regular.ttf no compila, por ello es que
+ agregare otra fuente para reemplazarle que sera Ubuntu-LightItalic para el parrafo "p".
+ Dejare comentado el ubuntu-regular.
+
+}
+
+@font-face {
+
+	font-family: ubuntuRegular;
+	src:url(fuentes/ubuntu-regular.ttf) format('truetype');
+}
+
+*/
+
+/* ACLARACION 2: Para llamar a un id lo hacemos con numeral o almohadilla "#". Sino lo es
+y es un metodo por ej footer o header en este caso lo haremos con la misma palabra
+
+
+
+
+
+
+
+ */
+
+@font-face {
+
+	font-family: ubuntuLightItalic;
+	src:url(fuentes/Ubuntu-LightItalic.ttf) format('truetype');
+}
+
+@font-face {
+
+	font-family: ubuntuBold;
+	src:url(fuentes/ubuntu-bold.ttf) format('truetype');
+}
+
+@font-face {
+
+	font-family: ubuntuItalic;
+	src:url(fuentes/ubuntu-italic.ttf) format('truetype');
+}
+
+@font-face {
+
+	font-family: ubuntuBoldItalic;
+	src:url(fuentes/ubuntu-bold-italic.ttf) format('truetype');
+}
+
+
+/* Estilos basicos */
+
+h1,h2,h3,h4,h5,h6 { font-family: ubuntuBold; }
+p { font-family:ubuntuLightItalic; } 
+
+	h1 {
+
+	/*En el video al comienzo lo agrega pero despues lo quita.
+	transform: translate(150px, 0px;);
+	-webkit-transform: translate(150px, 0px;);
+	position: relative;*/
+	color: white;
+	font-size: 36px;
+	top:-20%;
+	margin-top:10px;
+	letter-spacing: 0px;
+	display: inline;
+	text-shadow: 2px 2px 5px rgba(0,0,0, 0.5); 
+       
+       }
+
+	h2 {
+	color: white;
+	font-size: 16px;
+	top:-20%;
+	margin-top:10px;
+	letter-spacing: 0px;
+	
+	text-shadow: 2px 2px 5px rgba(0,0,0, 0.5); 
+	   }
+
+
+	#tipo { 	/*En el video no muestra para que usa este codigo pero esta,
+	 asique lo hago y despues veo a donde lo aplico. */
+	
+	display: inline;  /* (!!!) Codigo añadido por mi: Sin el "display: inline", se veia el titulo 
+	"Maurico Banega / Creativo Multimedia", por debajo del icono y quedaba mal, por ello añado esta linea.*/
+
+	position: absolute;
+	transform: translate(100px, 10px); 
+	-webkit-transform: translate(100px, 10px);
+
+	      }
+
+	h3 {
+	
+	margin-top:10px;
+	padding: 0px;
+	font-size: 36px;
+	text-shadow: 2px 2px 5px rgba(0,0,0, 0.5); 
+	   }
+
+	h4 {
+	
+	margin-top:0px;
+	padding: 0px;
+	font-size: 14px;
+	text-shadow: 2px 2px 5px rgba(0,0,0, 0.5); 
+	   }
+
+	p {
+	
+	font-size: 12px;
+	text-align: justify;
+	text-shadow: 1px 1px 3px rgba(0,0,0, 0.4); 
+	   }
+
+
+
+
+/* Maquetacion de Navegacion (Iconos e items de inicio para (noticias/sobre mi/contacto) en este caso)*/
+
+nav {
+
+	display: inline; 
+	float: right; 
+	margin:  20px;
+	}
+
+nav ul  {
+
+			font-size:  12px;
+			padding-left: 0px;
+			margin-left: 0px;
+			background-color: grey ;
+			color:  white;
+			width: 50%;
+			font-family:ubuntuLightItalic;
+			position: relative;
+			display: inline;
+		}
+
+
+nav ul li {
+
+	
+			display: inline;
+			text-align: center;
+		}
+
+
+nav ul li a {
+			background-color: grey ;
+			color:  white;
+			text-decoration: none;
+			float:  right;
+			border:  1px solid white;
+			border-radius: 0px 10px 0px 10px ;
+			-moz-border-radius: 0px 10px 0px 10px ;
+			-webkit-border-radius: 0px 10px 0px 10px ;
+			-o-border-radius: 0px 10px 0px 10px ;
+			box-shadow: 0px 0px 5px white;
+
+			width: 80px;
+		}
+
+nav ul li a:hover
+
+{
+
+	background: white;
+	color: black;
+	box-shadow: 0px 0px 25px white;
+	-webkit-box-shadow: 0px 0px 25px white;
+}
+
+
+canvas {
+
+	border:  0px solid white;
+
+		}
+
+/* Maquetacion principal*/
+
+body {
+
+text-align: center;
+margin: 0px;
+background: grey;
+
+/* (11)
+
+Aclaracion sobre el efecto de la fotoweb + las fotos con canal alpha que irian, en mi caso las otras 3 no tienen ese efecto. Pondre una sola y bonita.
+background:url('../img/azul.png'),url('../img/fondoweb.png');
+
+*/
+
+background:url('../img/fondo.png')
+
+}
+
+
+#principal {
+
+text-align: left;
+margin: auto;
+width: 80%;
+height: 100%;
+/*background:  gray; Al comienzo era gris, ahora cambiamos a color 
+semi-transparente de gris con valores rgba*/
+position:  relative;
+
+background: rgba(255,255,255, 0.5); 
+}
+
+#cajaheader
+{
+	width: 100%;
+	height:  100px;
+	position:  absolute;
+	background:  darkgrey;
+
+}
+
+header {
+
+	display: table; /*Esta propiedad sirve para aumentar la copatibilidad con navegadores basados 
+	en mozilla/opera. No representa un cambio visual en la pagina.*/
+	margin:  auto;
+	text-align:  left;
+	width:  100%;
+	height: 100px;
+	background:  darkgrey;
+	overflow: hidden; /*Cuando como en este caso las propociones del "header" sobre pasan las que le hemos dado, 
+	se superpone.Para que esto no ocurra aplicamos la etiqueta "overflow:  hidden; para que todo aquello
+	 que sobresalga del header se acomode/oculten. */
+
+	border:  2px solid white; /*Le damos un borde a la parde de arriba del blog (header claro),
+	donde en border radius le indicaremos la curvatura que tendran en cada esquina.*/
+
+	border-radius:  5px 35px 0px 0px; /*Ya aplicado la curvatura de cada esquina, le añado la compatibilidad-*/
+	-moz-border-radius:  5px 35px 0px 0px;
+	-webkit-border-radius:  5px 35px 0px 0px;
+	-o-border-radius:  5px 35px 0px 0px;
+
+	box-shadow:  0px 0px 10px white; /*Añadir resplandor/sombra: Sin desplazamiento en x/y 
+	con 10px de resplandor color blanco. Le damos compatibilidad tambien. */
+	-moz-box-shadow:  0px 0px 10px white;
+	-webkit-box-shadow:  0px 0px 10px white;
+	-o-box-shadow:  0px 0px 10px white;
+}
+
+#logo {
+
+
+	width: 100px;
+	height:  100px;
+	display: inline;
+	position: relative;
+}
+
+footer {
+
+	display: table; 
+	margin:  auto;
+	text-align:  center;
+	padding: 0px;
+	width:  100%;
+	border:  2px solid white;
+	background:  darkgrey;
+	border:  2px solid white;
+	border-radius: 0px 0px 5px 35px;
+	-moz-border-radius: 0px 0px 5px 35px;
+	-webkit-border-radius: 0px 0px 5px 35px;
+	-o-border-radius: 0px 0px 5px 35px;
+
+	box-shadow:  0px 0px 10px white; /* Mismos parametros blackshadow que en el header en este caso */
+	-moz-box-shadow:  0px 0px 10px white;
+	-webkit-box-shadow:  0px 0px 10px white;
+	-o-box-shadow:  0px 0px 10px white;
+
+}
+
+
+
+/* Contenido */
+
+#contenido {
+
+	width: 100%;
+	border:  2px solid white;
+
+	box-shadow:  0px 0px 10px white; /* Mismos parametros blackshadow que en el header en este caso */
+	-moz-box-shadow:  0px 0px 10px white;
+	-webkit-box-shadow:  0px 0px 10px white;
+	-o-box-shadow:  0px 0px 10px white;
+	
+}
+
+article {
+	width: 55%;
+	/*background:  white; 
+	float:  left;*/
+
+	background:rgba(255,255,255,0); /*Fondo del articulo:Blanco pero con
+	 transparencia 0 (total transparencia). Lo usaremos para transicionar este mismo blanco al valor 
+	 de 1 de transparencia (sin transparencia)*/
+
+	margin:  10px;
+	height: 100%;
+	display: table;
+	border:  1px solid white;
+	border-radius: 0px 25px 0px 25px;
+	-webkit-border-radius: 0px 25px 0px 25px;
+	-webkit-box-shadow: 3px 3px 10px black;
+	padding: 10px 10px 10px 150px; /*Para que no sobresalga el texto o el video 
+	e las cajas creamos este padding. */
+	
+	opacity: 0.5;/*Hace que el fondo sea mas transparente*/
+
+	transition: opacity 1s, box-shadow 1s, transform 1s, background 1s; /*Pasa de mas a menos transparencia 
+	en fondo y el boxshadow (el ilumninado), añadimos tambien al efecto lo hecho
+	 en el "transform: scale", mediante el aumento de tamaño, para que no se 
+	 realize de golpe sino en 1s tambien. Ademas le pondremos "background" 
+	 (que pasa de transparente a blanco en 1 s)*/
+
+	-webkit-transition: opacity 1s, -webkit-box-shadow 1s, -webkit-transform 1s, -webkit-background 1s;
+
+
+	transform: scale(1,1);/*TRANSFORM: SCALE, establece que el tamaño del articulo 
+	sea el estandard, pero que luego dentro del :hover indicaremos que porcentaje 
+	de ese tamaño (1,1) vamos a modificar.*/
+
+	-webkit-transform: scale(1,1);
+
+}
+
+article:hover { /*ARTICLE: HOVER 1*/
+	opacity: 1;
+	transform:scale(1.1, 1.1); /*TRANSFORM: SCALE, aca decimos que aumente un %10 del tamaño*/
+	-webkit-transform:scale(1.1, 1.1);
+
+	background:rgba(255,255,255,1);
+
+}
+
+time {
+	font-family: ubuntuLightItalic;
+	font-size: 10px;
+
+}
+
+article:hover { /*ARTICLE: HOVER 2*/
+
+	/*color:rgba(0,0,0,1); 
+	background:rgba (255,255,255,1);
+	opacity: 1;
+	transform:scale (1,1,1,1);
+	-webkit-transform:scale (1,1,1,1); Estas caracteristicas se ven despues de la explicacion que el puso pero 
+	que no explico asique comento estas lineas. Si explico lo del box-shadow a continuacion: */
+
+	 box-shadow: 0px 0px 25px white; /*Cuando pase el mouse por el articulo este resplandecera. El hover va pegadito 
+	a los dos puntos sino no compilara.*/
+	-webkit-box-shadow: 0px 0px 25px white; 
+}
+
+/*Edicion de la caja aside*/
+
+aside { 
+
+	float:  right;
+	display:  inline-table;
+	width: 40%;
+	/*background:  white; */
+	margin: 10px;
+	padding:  10px;
+	border: 1px solid white;
+	border-radius: 0px 25px 0px 25px;
+	-webkit-border-radius: 0px 25px 0px 25px;
+	box-shadow: 3px 3px 10px black;
+	-webkit-box-shadow: 3px 3px 10px black;
+
+}
+
+/*Edicion de Post Previos de la caja aside*/
+
+aside ul{ 
+
+	width: 100%;
+	height: 100%;
+	padding-left: 0;
+	padding-right: 0;
+	color:  white;
+	float: left;
+	font-family: ubuntuLightItalic;
+	font-size: 10px;
+	text-decoration:none;
+	list-style:none;
+}
+
+/*Edicion cada elemento de la lista no ordenada */
+
+aside ul li{ 
+
+	width: 100%;
+	text-decoration: none;
+	border: 1px solid white;
+	border-radius: 0px 5px 0px 5px;
+	-webkit-border-radius: 0px 5px 0px 5px;
+	text-decoration: none;
+}
+
+/*Edicion de cada enlace */
+
+aside ul li a{
+
+	width: 100%;
+	height: 100%;
+	overflow: hidden; /*Oculta lo que sobresalga de la caja*/
+	text-decoration: none; /*Quitara, en este caso las lineas de los enlaces que puede ser molesto de ver.*/
+}
+
+
+#sobremi {
+
+width: 100%;
+height: 120%;
+background: blue;
+color: white;
+display: table;
+background: black;
+font-size: 10px;
+text-decoration: none;
+text-align: justify;
+overflow: hidden;
+
+}
+
+#sobremi a{
+
+color: white;
+text-decoration: none;
+
+}
+
+
+#mifoto{  /*Edicion del div creado para reemplazar/editar la foto.
+
+Reniegue: En width/height ponia % en vez de 100px y no mostraba la imagen, ver bien!*/
+
+width: 100px;
+height: 120px;
+font-family: ubuntuBold;
+font-size: 20px;
+color:white;
+text-align:left;
+
+background: url('../photo/mauriciobanegacvfoto.jpg');
+background-size: 100% 100%;
+background-repeat: no-repeat;
+display: box;
+
+border: 1px solid white;
+border-radius:  0px 10px 0px 10px;
+box-shadow: 0px 0px 10px white;
+-webkit-border-radius:  0px 10px 0px 10px;
+-webkit-box-shadow: 0px 0px 10px white;
+float: left;
+margin: 10px;
+
+animation: parpadeo 5s;
+-webkit-animation: parpadeo 5s;
+animation-iteration-count: infinite;
+-webkit-animation-iteration-count: infinite;
+
+} 
+
+
+@keyframes parpadeo {
+
+
+0% {box-shadow: 0px 0px 10px white;}
+50% {box-shadow: 0px 0px 50px white;}
+100% {box-shadow: 0px 0px 10px white;}
+
+}
+
+
+@-webkit-keyframes parpadeo {
+
+
+0% {-webkit-box-shadow: 0px 0px 10px white;}
+50% {-webkit-box-shadow: 0px 0px 50px white;}
+100% {-webkit-box-shadow: 0px 0px 10px white;}
+
+}
+
+
+
+
+#logoproximostemas{  /*Edicion del div articulos: Proximos Temas*/
+
+width: 100px;
+height: 100px;
+font-family: ubuntuBold;
+font-size: 20px;
+color:white;
+text-align:left;
+
+background: url('../photo/fototemas.jpg');
+background-size: 100% 100%;
+background-repeat: no-repeat;
+display: box;
+
+border: 1px solid white;
+border-radius:  0px 10px 0px 10px;
+box-shadow: 0px 0px 10px white;
+-webkit-border-radius:  0px 10px 0px 10px;
+-webkit-box-shadow: 0px 0px 10px white;
+float: left;
+margin: 10px;
+
+
+position: absolute; /*Position (absoluto): Centra al logo tipo por arriba del 
+texto. Ojo, sino le pongo las comas a los valores asignados en x/y no se correra.
+ Reniegue */
+transform: translate(-140px, 0px);
+-webkit-transform:translate(-140px, 0px);
+-moz-transform:translate(-140px, 0px); 
+
+} 
+
+#logoplanesafuturo{  /*Edicion del div articulos: Planes a futuro*/
+
+width: 100px;
+height: 100px;
+font-family: ubuntuBold;
+font-size: 20px;
+color:white;
+text-align:left;
+
+background: url('../photo/fotoproyectos.jpg');
+background-size: 100% 100%;
+background-repeat: no-repeat;
+display: box;
+
+border: 1px solid white;
+border-radius:  0px 10px 0px 10px;
+box-shadow: 0px 0px 10px white;
+-webkit-border-radius:  0px 10px 0px 10px;
+-webkit-box-shadow: 0px 0px 10px white;
+float: left;
+margin: 10px;
+
+position: absolute; /*Position (absoluto): Centra al logo tipo por arriba del 
+texto. Ojo, sino le pongo las comas a los valores asignados en x/y no se correra.
+ Reniegue */
+transform: translate(-140px, 0px);
+-webkit-transform:translate(-140px, 0px);
+-moz-transform:translate(-140px, 0px); 
+} 
+
+
+#logoplanesdeviaje{  /*Edicion del div articulos: Planes de Viaje*/
+
+width: 100px;
+height: 100px;
+font-family: ubuntuBold;
+font-size: 20px;
+color:white;
+text-align:left;
+
+background: url('../photo/fotoviajes.jpg');
+background-size: 100% 100%;
+background-repeat: no-repeat;
+display: box;
+
+border: 1px solid white;
+border-radius:  0px 10px 0px 10px;
+box-shadow: 0px 0px 10px white;
+-webkit-border-radius:  0px 10px 0px 10px;
+-webkit-box-shadow: 0px 0px 10px white;
+float: left;
+margin: 10px;
+
+position: absolute; /*Position (absoluto): Centra al logo tipo por arriba del 
+texto. Ojo, sino le pongo las comas a los valores asignados en x/y no se correra.
+ Reniegue */
+transform: translate(-140px, 0px);
+-webkit-transform:translate(-140px, 0px);
+-moz-transform:translate(-140px, 0px); 
+} 
+
+#logootro{  /*Edicion del div a crear otro*/
+
+width: 100px;
+height: 100px;
+font-family: ubuntuBold;
+font-size: 20px;
+color:white;
+text-align:left;
+
+background: url('../photo/fotoviajes.jpg');
+background-size: 100% 100%;
+background-repeat: no-repeat;
+display: box;
+
+border: 1px solid white;
+border-radius:  0px 10px 0px 10px;
+box-shadow: 0px 0px 10px white;
+-webkit-border-radius:  0px 10px 0px 10px;
+-webkit-box-shadow: 0px 0px 10px white;
+float: left;
+margin: 10px;
+
+position: absolute; /*Position (absoluto): Centra al logo tipo por arriba del 
+texto. Ojo, sino le pongo las comas a los valores asignados en x/y no se correra.
+ Reniegue */
+transform: translate(-140px, 0px);
+-webkit-transform:translate(-140px, 0px);
+-moz-transform:translate(-140px, 0px); 
+} 
+
+
+
+/*MAQUETADO DE CONTACTO.HTML:  Haremos que los campos de nombre/mail
+si son los requeridos o invalidos tengan un color señalizandolo */
+
+
+[required]{
+	border-color: green;
+	box-shadow:  0px 0px 5px green;
+	-webkit-box-shadow:  0px 0px 5px green;
+}
+
+:invalid{
+	border-color: red;
+	box-shadow:  0px 0px 50px red;
+	-webkit-box-shadow:  0px 0px 50px red;
+}
+
+
+/* Siguiendo con el maquetado de CONTACTO.HTML le daremos estilo al Form y a la 
+tabla con las fuentes. */
+
+form table{
+	width: 100%;
+	border:  0px solid white;
+	padding:  0px;
+	margin: auto;
+
+}
+
+form{
+	font-family:ubuntuLightItalic;
+	color: black;
+	text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+	border:  1px solid white;
+	border-radius: 0px 15px 0px 15px;
+	-webkit-border-radius: 0px 15px 0px 15px;
+	box-shadow: 10px 10px 25px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 10px 10px 25px rgba(0,0,0,0.5);
+	background: rgba(255,255,255,0.5);
+	margin: auto;
+	width: 80%;
+	padding: 10px;
+}
+
+form input, form textarea{
+	font-size: 10px;
+	font-family:ubuntuLightItalic;
+	background: rgba(255,255,255,0.5);
+	border:  1px dotted white;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	border-radius: 0px 5px 0px 5px;
+	-webkit-border-radius: 0px 5px 0px 5px;
+}

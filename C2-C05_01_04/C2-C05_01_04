@@ -1,0 +1,46 @@
+
+<!-- HTML y CSS3 - Capitulo 2 (Video 7): 05_01_04 - Gradiente: Continuamos dibujando en Canvas, haremos cuadrado y dentro pintaremos de colores con estilo gradiente al cuadrado, aplicando los conceptos. --> 
+
+<html>
+
+
+	<body>		
+
+		<canvas id="gradiente" width="400px" height="400px" style="border:1px solid black;">
+
+
+			Tu navegador no soporta Canvas
+
+
+		</canvas>
+
+
+
+		<script type="text/javascript">		
+
+
+			var c=document.getElementById("gradiente");
+			var cxt=c.getContext("2d");
+
+			var grd=cxt.createLinearGradient(0,0,400,0);      		 <!-- Si modifico los valores numericos desde aqui, pueden obtenerse gradientes verticales (0,0,0,400), diagonales (0,0,400,400). Ahora es 																			horizontal. Si ponemos (100,0,300,0), hara el mismo gradiente inicial con todos los colores pero pintando con el blanco de 0 a 100 y de 																	negro de 300 a 0 color final. --> 
+
+			grd.addColorStop(0,"White");
+			grd.addColorStop(0.25,"Red");
+			grd.addColorStop(0.5,"Green");
+			grd.addColorStop(0.75,"Blue");
+			grd.addColorStop(1,"Black");
+
+
+			cxt.fillStyle=grd;
+			cxt.fillRect(0,0,400,400);
+
+
+		</script>
+
+
+
+
+	</body>
+
+
+</html>

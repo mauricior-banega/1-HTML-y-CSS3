@@ -1,0 +1,18 @@
+#Manifiesto v1.0
+#Este es un manifiesto para mi pagina web 
+
+CACHE MANIFEST <!-- Aqui cargaremos todos aquellos manifiestos, podremos algunas ej: paginas, ccs, que deban ser cacheados cuando la pagina este offline. -->
+manifiesto.html
+estilos.css
+images/images.png
+scripts/miscripts.js 
+
+NETWORK:  <!-- Como lenguajes del lado del servidor, cargaremos todos aquellos archivos por ej en PHP que hallamos usado. -->
+log.php
+visitas.php
+
+FULLBACK: <!-- Si por lo que fuera, no cargase o fallaran automaticamente, podemos crear archivos en fullback para darle un intento mas para cargarlos nuevamente, ya que si carga y falla le dara la posibilidad a estos para que se carguen de nuevo. -->
+img/imagen.png
+archivo.php
+
+

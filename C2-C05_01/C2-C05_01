@@ -1,0 +1,30 @@
+
+<!-- HTML y CSS3 - Capitulo 2 (Video 4): 05_01_01 - Dibujaremos mediante la etiqueta Canvas. Crearemos una estructura rectangular en donde dibujaremos dentro. --> 
+
+
+<html>
+	<body>
+
+		<canvas id="miCanvas"  width="400px" height="400px" style="border:2px solid #000000;">  <!-- En la etiqueta canvas creamos un id que le llamaremos miCanvas, en el crearemos los parametros del rectangulo (																								/ancho/borde/estilo/color). --> 
+			Tu navegador no soporta Canvas
+		</canvas>
+
+
+		<!-- Ahora crearemos la etiqueta script, donde crearemos el rectangulo --> 
+
+
+		<script type="text/javascript">    
+			var c=document.getElementById("miCanvas");     <!-- Indicamos que el dibujo se realize dentro del cuadrado o dobujo creado miCanvas--> 
+			var cxt=c.getContext("2d");                    <!-- Indicamos que el dibujo sea en 2 dimenciones.--> 
+			cxt.fillStyle="Red";                           <!-- Indicamos que sea color rojo--> 
+			cxt.fillRect(10,30,100,50);					   <!-- Indicamos que este ubicado segun coordenadas x e y, asi como tambien alto y ancho del rectangulo rojo. --> 
+		</script>
+
+
+		<!-- NOTA: Lo que dibujamos queda guardado como una imagen en mapa de bits (la que creamos bajo el id canvas), que puede ser descargado/guardado desde el mismo navegador. --> 
+
+
+
+
+	</body>
+</html>

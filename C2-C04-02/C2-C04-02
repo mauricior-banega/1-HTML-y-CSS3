@@ -1,0 +1,69 @@
+
+<!-- HTML y CSS3 - Capitulo 2 (Video 1/2/3): 04_02_01/02/03 - Insertar Audio en la Web--> 
+
+
+<html>	<!-- (Video 1º) Aplicaremos el metodo audio para insertar uno en la Web. Ya convertimos un audio del Potro en 3 tipos de audios, mp3/ogg/wav con los que ejemplificaremos. -->
+
+
+	<audio src="Rodrigo.ogg" controls="controls" >
+		Tu archivo de audio no soporta HTML5
+	</audio><p>
+
+
+
+
+	
+
+
+	<!-- NOTA: Para convertir los archivos en distintos formatos se puede usar paginas como (https://convertio.co/es/ o https://www.online-convert.com/es) que de hecho usamos para los ejercicios.-->
+
+
+
+
+
+
+
+
+	<!-- (Video 2º) NOTA: Como vimos en el anterior video donde quitabamos src para poder crear un source con distintos tipos de videos, haremos lo mismo para explicarlo y ejemplificarlo tambien asi.-->
+
+
+
+
+	<audio  controls="controls" >
+
+		<source src="Rodrigo.ogg" type="audio/ogg">
+		<source src="Rodrigo.mp3" type="audio/mpeg"> 
+		<source src="Rodrigo.wav" type="audio/wav">
+
+
+		Tu archivo de audio no soporta HTML5
+
+	</audio><p>
+
+
+
+
+
+
+	<!-- (Video 3º) Ahora, aplicaremos algunas etiquetas en audio; como: (preload): Carga el video apenas abrimos la web, y no cuando damos a play.
+																		 (autoplay): Se reproduce apenas abrimos el navegador.																						  	(loop): El audio se volvera a reproducior apenas finalize.	-->
+
+	<audio  controls="controls" preload="preload" autoplay="autoplay" loop="loop">
+
+		<source src="Rodrigo.ogg" type="audio/ogg">
+		<source src="Rodrigo.mp3" type="audio/mpeg"> 
+		<source src="Rodrigo.wav" type="audio/wav">
+
+
+		Tu archivo de audio no soporta HTML5
+
+	</audio><p>
+
+
+
+
+
+
+
+
+</html>

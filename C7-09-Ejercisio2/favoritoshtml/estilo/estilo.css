@@ -1,0 +1,334 @@
+
+
+
+
+			/*Aqui cargamos las fuentes desde la carpeta fuentes de favoritos.html*/
+
+			@font-face
+			{
+				font-family:ubuntuRegular;
+				src: url(fuentes/ubuntu-regular.ttf) format('truetype');
+			}
+
+			@font-face
+			{
+				font-family:ubuntuBold;
+				src: url(fuentes/ubuntu-bold.ttf) format('truetype');
+			}
+
+			@font-face
+			{
+				font-family:ubuntuBoldItalic;
+				src: url(fuentes/ubuntu-bold-italic.ttf) format('truetype');
+			}
+
+			@font-face
+			{
+				font-family:ubuntuLightItalic;
+				src: url(fuentes/Ubuntu-LightItalic.ttf) format('truetype');
+			}
+
+
+			body 
+			{
+				margin: auto;
+				padding: 0px;
+			}
+
+			#contenedor
+			{
+				margin: auto;
+				width: 80%;
+				border: 1px solid black;
+				-webkit-box-shadow:  0px 20px 35px rgba(0,0,0,0.5);
+				-moz-box-shadow:  0px 20px 35px rgba(0,0,0,0.5);
+				-o-box-shadow:  0px 20px 35px rgba(0,0,0,0.5);
+				border-radius: 15px;
+			}
+
+			header 
+			{
+				background: rgba(255,255,255,0); /* (2) Background de guia para ver las areas que afecta cada campo */
+				height: 150px;
+
+
+			}
+
+			#contenido
+			{
+				
+			}
+
+			#etiquetas
+			{
+				padding: 10px;
+			}
+
+			footer
+			{
+				background: rgba(212,184,131,0.5);
+				text-align: center;
+				font-family: ubuntuRegular;
+				font-size: 12px;
+			}
+
+			#logotipo
+			{
+				font-size: 0px;
+				float: left;
+				position: absolute;
+				margin: 0px;
+				padding: 0px;
+			}
+
+			#tipo
+			{
+				position: absolute;
+				padding: 0px;
+				margin: 0px;	
+				font-size: 36px;
+				color: rgba(255,255,255,1);
+				text-shadow: 2px 2px 5px rgba(0,0,0, 0.5);
+				font-family: ubuntuBoldItalic; 
+				transform: translate(150px,0px);
+				-webkit-transform: translate(150px,0px);
+				-moz-transform: translate(150px,0px);
+				-o-transform: translate(150px,0px);
+			}
+
+			#logo
+			{
+				float: left;
+				width: 50%;
+				text-align: center;
+				height: 100%;
+				vertical-align: middle;
+				position: absolute;
+				padding: 0px;
+				margin: 0px;
+
+				/* Animaremos mediante animation que le pondremos como en este ej el nombre: late (porque es lo que hara); hacemos que realice latidos en este caso 5 segundos. */
+				animation: late 5s;
+				-webkit-animation: late 5s; /*Añado compatibilidad con Webkit*/
+
+				-webkit-transform: scale(1,1); /* Instanciamos en 1 la escala*/
+				-webkit-animation-iteration-count: 5; /* Este metodo indica cuantos latidos hara, cuantas veces digamos, pudiendose tambien poner :infinite para que sea permanente el efecto del latido.*/
+			}
+
+			/* Creamos creamos el metodo hara los cambios que esta estrella realizara en cada uno de los 3 ciclos en la animacion que le dimos como nombre: late, en este caso transformado a un aumento de tamaño y volviendo al tamaño de origen nuevamente. */
+
+			@-webkit-keyframes late
+			{
+				0% {-webkit-transform: scale(1,1);}
+				45% {-webkit-transform: scale(1,1);}
+				47% {-webkit-transform: scale(0.98,0.98);}
+				50% {-webkit-transform: scale(1.02,1.02);}
+				53% {-webkit-transform: scale(0.98,0.98);}
+				55% {-webkit-transform: scale(1,1);}
+				100% {-webkit-transform: scale(1,1);}
+			}
+
+			#login
+			{
+				padding: 10px;
+				float: right;
+				width: 50%;
+				text-align: right;
+				vertical-align: middle;
+
+			}
+
+			input
+			{	
+				padding: 5px;
+				font-family: ubuntuRegular;
+				text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+				border: 0px solid white;
+				border-radius: 5px;
+				background: rgba(0,0,0, 0.1);
+				box-shadow: inset:  0px 0px 3px rgba(0,0,0,0.2);
+				-webkit-box-shadow: inset:  0px 0px 3px rgba(0,0,0,0.2);
+				-moz-box-shadow: inset:  0px 0px 3px rgba(0,0,0,0.2);
+				-o-box-shadow: inset:  0px 0px 3px rgba(0,0,0,0.2);
+
+				/*Estilo para el hipervinculo (quitamos la linea del enlace)*/
+				transition: box-shadow 1s, background 1s, border 1s;
+				-webkit-transition: box-shadow 1s, background 1s, border 1s;
+			}
+
+			input:hover
+			{
+				box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+				-webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+				background: rgba(0,255,0,0.1);
+				border:  2px solid white;
+			}	
+
+
+
+
+			a /*Estilo para el hipervinculo (quitamos la linea del enlace)*/
+			{
+				text-decoration: none;
+				color: rgba(0,0,0,1);
+			}
+
+			#registrate /*Estilo para el div registrate (hipervinculo), donde añadimos color/tamaño/animacion de su color de fondo. Algo muy interesante es que desde Inkscape, si vemos en el color del logo que creamos (debemos fijanos en Color Uniforme/RGBA) podremos poner el mismo color en el fondo del text shadow segun los valores que alli muestra, en este caso aplicamos (255,204,0, donde 0 es el nivel de transparencia u opacidad).*/
+			{
+				color: rgba(0,0,0,1);
+				font-size: 10px;
+				text-shadow: 0px 0px 5px rgba(255,204,0,0);
+				animation: registrate 2s;
+				-webkit-animation: registrate 2s;
+				animation-iteration-count: infinite;
+
+			}
+
+			@-webkit-keyframes registrate
+			{
+				0% {text-shadow: 0px 0px 5px rgba(255,204,0,0);}
+				50% {text-shadow: 0px 0px 5px rgba(255,204,0,1);}
+				100% {text-shadow: 0px 0px 5px rgba(255,204,0,0);}
+			}
+
+
+
+
+			/* Estilo y animacion para la presentacion (donde dice Cansado de perder tus favoritos?/Te gustaria no perderlos?), borramos el ejemplo donde le habiamos puesto solo el background para identificar el campo que habiamos creado arriba. Ahora haremos que tenga otros efectos (ampliarse por unos segundos para mostrar ese mensaje y luego volver a su estado normal).*/
+
+			#presentacion
+			{	
+				padding: 0px;
+				margin: 0px;
+				text-align: left;
+				width: 100%;
+				height: 0px;
+				background: rgba(0,0,0,0.1); 
+
+				/*  Creamos un fondo de la presentacion insertando una foto bajada en jpg de Google, donde le damos la alineacion center center para que quede centrado en x e y. Ademas en background-size acomodamos la resolucion para que quede no tan recortada/estirada en el div. Por lo que despues animaremos justamente cambiando el tamaño de esa foto, quedando el efecto de acercarnos mas a la misma mientras transcurre el tiempo.*/
+
+				background: url('../fondobanner.jpg') center center;
+
+				background-size: 1600px 300px;
+
+				box-shadow: inset 0px 0px 5px rgba(0,0,0,0.2);
+				-webkit-box-shadow: inset 0px 0px 5px rgba(0,0,0,0.2);
+				-webkit-animation:  esconde 15s;
+
+			}
+
+			@-webkit-keyframes esconde
+			{
+				0% {height: 100px;background-size: 1600px 300px;}
+				50% {height: 100px;}
+				100% {height: 0px;background-size: 2400px 600px;}
+			}
+
+			/*Daremos la animacion a los subtitulos, osea los div animaciontexto1/2 en donde el efecto es que el texto aparezca y desaparezca luego de transcurrido en este caso 5s. Para el segundo sub aplicamos la propiedad de animaccion de ccs3 animation-delay para que de el mismo efecto pero con 5s despues, esto hace que el primer sub se muestre y desaparezca, y luego el segundo se muestre recien en ese momento.*/
+
+			#animaciontexto1
+			{
+				font-family: ubuntuBold;
+				position: absolute; /* Hacemos que ocupe el mismo lugar el 1º sub que el 2º*/
+				color: rgba(255,255,255,0);
+				text-shadow:  3px 3px 5px rgba(0,0,0,0);
+				font-size:32px;
+				-webkit-transform: translate(150px,0px);
+				-webkit-animation: muevetexto1 5s;
+
+			}
+
+			@-webkit-keyframes muevetexto1
+			{
+				0% {color: rgba(255,255,255,0.);-webkit-transform: translate(-150px,0px);text-shadow:  3px 3px 5px rgba(0,0,0,0);}
+				25% {color: rgba(255,255,255,1);-webkit-transform: translate(0px,0px);text-shadow:  3px 3px 5px rgba(0,0,0,0.3);}
+				50% {color: rgba(255,255,255,1);-webkit-transform: translate(0px,0px);text-shadow:  3px 3px 5px rgba(0,0,0,0.3);}
+				75% {color: rgba(255,255,255,1);-webkit-transform: translate(0px,0px);text-shadow:  3px 3px 5px rgba(0,0,0,0.3);}
+				100% {color: rgba(255,255,255,0);-webkit-transform: translate(150px,0px);text-shadow:  3px 3px 5px rgba(0,0,0,0);}
+			}
+
+
+			#animaciontexto2
+			{
+				font-family: ubuntuBold;
+				position: absolute; /* Hacemos que ocupe el mismo lugar el 1º sub que el 2º*/
+				color: rgba(255,255,255,0);
+				text-shadow:  3px 3px 5px rgba(0,0,0,0);
+				font-size:32px;
+				-webkit-transform: translate(150px,0px);
+				-webkit-animation: muevetexto2 5s;
+				-webkit-animation-delay: 5s; /*Metodo para que el efecto se aplique con demora de ej: 5s despues de ejecutado.*/
+
+			}
+
+			@-webkit-keyframes muevetexto2
+			{
+				0% {color: rgba(255,255,255,0.);-webkit-transform: translate(-150px,0px);text-shadow:  3px 3px 5px rgba(0,0,0,0);}
+				25% {color: rgba(255,255,255,1);-webkit-transform: translate(0px,0px);text-shadow:  3px 3px 5px rgba(0,0,0,0.3);}
+				50% {color: rgba(255,255,255,1);-webkit-transform: translate(0px,0px);text-shadow:  3px 3px 5px rgba(0,0,0,0.3);}
+				75% {color: rgba(255,255,255,1);-webkit-transform: translate(0px,0px);text-shadow:  3px 3px 5px rgba(0,0,0,0.3);}
+				100% {color: rgba(255,255,255,0);-webkit-transform: translate(150px,0px);text-shadow:  3px 3px 5px rgba(0,0,0,0);}
+			}
+
+			table
+			{
+				/*Al principio teniamos width: 100% (quedando cada tabla todo a lo largo ocupando toda la tabla logicamente). pero deseamos poner las 6 tablas en dos grupos de 3 al vertical, entonces para ello si ponemos que el width sea de 50% + un float: left; me hace los dos grupos de 3 pero si le damos margen 1% no entra y las pone a todas por debajo en fila, entonces el truco va a ser poner el width en 48% y un margen de 1% nuevamente y ahi si entra todo en dos filas de 3 c/u*/
+				width: 48%;
+				float: left;
+				margin: 1%;
+
+
+				border: 1px solid rgba(255,255,255,1);
+				border-radius: 10px;
+				background: rgba(212,184,131,0.1);
+				box-shadow:  0px 0px 10px rgba(0,0,0,0.5);
+				-webkit-box-shadow:  0px 0px 10px rgba(0,0,0,0.5);
+
+				-webkit-transform: scale(1,1); /*Instanciamos el valor iniciar de tamaño de cada tabla*/
+				-webkit-transition: -webkit-transform 1s;/*Metodo para que la transformacion se ejecute durante 1 segundo al tamaño 1.1*/
+			}
+
+			table:hover
+			{
+				-webkit-transform: scale(1.1,1.1);
+			}
+
+
+
+
+ 
+			table th
+			{
+				text-align: left;
+				width: 100%;
+				font-family: ubuntuBold;
+				border: 1px solid rgba(0,0,0,0.5);;
+				border-radius: 10px;
+				background: rgba(212,184,131,0.5); /*Color elegido (dorado) desde Inkscape, con 0.2 de transparencia que le daremos ahora.*/
+				box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+				-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+			}
+
+			table td
+			{
+				
+				border: 0px solid white;
+				text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+
+
+			}
+
+			#estrellas
+			{
+				float: right;
+				font-size: 12px;
+				font-family: ubuntuRegular;
+			}
+				
+
+			#trampa
+			{
+				opacity:0;
+				-webkit-opacity:0;
+			}
+

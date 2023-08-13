@@ -1,0 +1,72 @@
+
+<!-- HTML y CSS3 - Capitulo 2 (Video 6): 05_01_03 - Circulos: Continuamos dibujando en Canvas, haremos cuadrado y dentro una cara circular con su sonrrisa y ojos aplicando los conceptos. --> 
+
+<html>
+
+
+	<body>		
+
+		<canvas id="logotipo" width="120px" height="120px" style="border:1px solid black;">
+
+
+			Tu navegador no soporta Canvas
+
+
+		</canvas>
+
+
+
+		<script type="text/javascript">		
+
+
+			var c=document.getElementById("logotipo");
+			var cxt=c.getContext("2d");
+
+			cxt.fillStyle="blue"; 								<!-- El recorrido sera de color azul, con el que haremos el circulo color azul "CARA DEL EMOTICON". --> 
+			cxt.beginPath();							    	<!-- Definimos el recorrido, sin paramentros -->
+			cxt.arc(60,60,50,0,Math.PI*2,true);					<!-- Los parametros de "arc" o Arco en su recorrido seran, partiendo desde 60x/60y/50-tamaño del radio en px del circulo/su apertura sera desde 0 a 															2XPI, que sera un circulo completo ya que 1PI radial es medio circulo. Ademas sucede que Javascript no reconoce el valor por defecto de la variable 														PI, por ello lo tenemos que exportar desde la libreria Math, que quedara Math.PI-->
+			cxt.closePath;
+			cxt.fill();
+
+
+
+
+
+			cxt.fillStyle="white";								<!-- Este recorrido sera blanco con el que haremos un circulo por la mitad, que sera la "SONRRISA DEL EMOTICON". --> 
+			cxt.beginPath();
+			cxt.arc(60,60,30,0.75*Math.PI,Math.PI*2,true);			<!-- Vemos que si multiplicamos distintos valores en Math, este "achica" la media sonrrisa incrementando o decrementando esta. Le pondremos para el 																ejemplo:0.75*Math.PI para inicializar. -->
+			cxt.closePath;
+			cxt.fill();
+
+
+
+
+
+			cxt.fillStyle="white";								<!-- Este recorrido sera blanco con el que haremos un circulo, que sera el "OJO DERECHO DEL EMOTICON". --> 
+			cxt.beginPath();
+			cxt.arc(70,40,10,Math.PI,Math.PI*2, false);			<!-- NOTA: Vemos que al final del paramentro arc, finalizamos con true pero si ponemos "false", muestra la parte que no deberia verse osea el 																	invertido. Por ello cambiaremos true por false. --> 
+			cxt.closePath;
+			cxt.fill();
+
+
+
+
+			
+			cxt.fillStyle="white";								<!-- Este recorrido sera blanco con el que haremos un circulo, que sera el "OJO IZQUIERDO DEL EMOTICON" con valores de Math pensados para que sea 																	espejo del derecho. --> 
+			cxt.beginPath();
+			cxt.arc(40,50,10,1.8*Math.PI,0.8*Math.PI, true);			
+			cxt.closePath;
+			cxt.fill();
+
+
+
+
+		</script>
+
+
+
+
+	</body>
+
+
+</html>

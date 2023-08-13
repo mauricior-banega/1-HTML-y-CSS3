@@ -1,0 +1,4 @@
+-Se pudo lograr avanzar en el practico pero explica tambien que hay otros archivos php creados del cual no explica como se realizan y es por ello que no cumple las funciones como indica en la pagina. Si esta lo principal y algunas funciones.
+
+-Mas adelante cuando tenga conocimientos avanzados en php podre terminar este con mi propia experiencia para asi poder dejarlo completo y funcional.
+

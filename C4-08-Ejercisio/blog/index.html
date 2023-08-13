@@ -1,0 +1,354 @@
+<!-- HTML y CSS3 - Crearemos el "Blog".
+
+*IMPORTANTE! VISUALIZACION: Para que no corra el codigo siempre a la derecha sin poder verlo despues, en Sublime Text vas a View/Word Wrap (y tildamos la opcion).
+
+
+(1)Atajos: Si tipeo "!"+ "tecla "TAB" se autocompleta en el formato Docitype con toda la estructura inicial, podemos borrar luego las que no usemos.
+
+
+(2) Atajos: Podemos usar la etiqueta "meta" dentro del head que sirve para actualizar/refrescar (refresh) la pagina web en la que trabajemos, donde mendiante un "content" indicaremos los segundos para que la web actualize. Esto es util al principio en la creacion del blog para ir viendo automaticamente como va quedando, pero luego va a molestar asique hay que quitarlo 
+
+(3) INFO: Las letras o fuentes por defecto en HTML para mostrar en web siempre son por defecto es del tipo Times Nwe Roman, que luego pueden ser cambiadas dentro de la creacion del codigo.
+
+(4) INFO: En la configuracion del editor sucede que las letras Ñ o letras con acentos, muchas veces no son interpretados por el navegador web y muestran caracteres extraños muchas veces. Esto es porque el index.html en donde guardamos el codigo de la pagina esta en formato ((Unicode)UTF-8), para que esto no suceda debemos elegir o reemplaza el formato a (Occidental(ISO8859-15)) y guardar.
+
+(4) INFO: Los Micro datos pertenecientes a una persona dispuesto por Google para webmasters: Buscar en la web http://data-vocabulary.org/Person, en ella podemos buscar los atributos que usaremos para definir nombre/tel/direccion etc. pero podemos buscar de cualquier organismo. Estos datos nos sirven para dar a conocer al navegador que tipo de dato es y de que categoria ya que si aparece Mauricio Banega la web no sabra que es mi nombre hasta que lo definamos mediante span e itemprop.
+
+(5) Carta de Presentacion: Para hacerla hay que hacer un div que la contenga, en este caso dentro del footer, dentro cargaremos los datos pertenecientes a nuestros datos de contacto como esta en indicado en el ejercisio.
+
+(6) Contador de Visitas (localStorage): Herramienta de Local Storage (espacio de memoria "permanente" de nuestro navegador) que nos permite contabilizar y mostrar las veces que es visitado nuestra pagina por los usuarios y por usuario individualmente y que se mostrara en la web, se utlizaran metodos HTML5 y Javascript. Lo haremos debajo de la carta de presentacion.
+
+(7) Contador de Sesiones (sessionStorage): Herramienta de Session Storage (espacio de memoria "volatil o que se borra al cerrar ventana" de nuestro navegador) que nos permite contabilizar y mostrar las veces que es visitado nuestra pagina por los usuarios y por usuario individualmente y que se mostrara en la web pero que se borran al cerrar, es decir vuelven a 0.
+
+(8) CANVAS: Dibujaremos "Iconos" con canvas para nuestros items. Para ello declaramos el id, canvas id="iconosobremi" donde creara el espacio donde se ubicara nuestro espacio para dibujar mediante Javascript. El dibujo en si lo haremos fuera del documento para no hacer lio, es decir fuera de la etiqueta </html>. Estableceremos el codigo de un circulo en el que empezaremos a dibujar y otro medio circulo que haran el dibujo de un "icono", crearemos variables de color y tamaño para modificar en conjunto/proporcion todo el dibujo. Luego haremos otro icono para "contacto" donde duplicamos lo realizado para icono y ponemos grades de desplazamiento para x e y. Creamos tambien el icono de index (de id "iconoinicio") donde dibujamos 3 circulos de distinto tamaño, uno dentro del otro. Ahora creamos el icono para "noticias".
+
+
+(9) ESTILO: Para que nuestro estilo no este unicamente en la pagina index.html, es decir no quede en forma local sino en todas las paginas que tendra nuestro blog crearemos una variable "estilo.css" que guardaremos en la carpeta "css" de nuestra carpeta principal, "blog". Ademas en la carpeta css creamos una carpeta "fuentes" donde descargamos las fuentes que usaremos en nuestro proyecto que seran ubuntu/u.regular/u.bold/u.italica. Utilizando estas fuentes es que codificaremos el archivo estilo.css para llamar a cada una de estas fuentes desde CSS3 para ser aplicadas a nuestro blog HTML5.
+
+(10) CREAMOS OTRO DIV: CONTENIDO
+
+(11) CONVINAR FONDOS SEMITRANSPARENTES (CANAL ALPHA): Significa que se pueden poner varios fondos convinados para un mismo background, pero para esto tenes que crear imagenes con este efecto. En la clase el utiliza un fondo principal que es de lineas negras y fondo gris asfaltivo, al que le superpone distintas fotos con canal alpha en blanco/negro/azul dandole distintos matizes que hacen mas o menos agradable al fondo final. Pero en mi caso como no tengo editor para poner fotos con canal alpha dejare un solo fondo agradable al cual llamare tambien desde la carpeta img de blog. El codigo es realizado en estilo.css -body- y seria este: background:url('../img/azul.png'),url('../img/fondoweb.png');
+
+(12) MANIFIESTO: Creamos una carpeta llamada manifiesto y dentro un archivo manifiesto.cache; donde alli cargaremos el codigo para que cuando la pagina sea cargada al menos una vez la misma sea cacheada/recordada y se abran los atributos que cargamos (fotos/videos/index/estilo.css/imagenes, etc).
+
+(13) CONTACTO.HTML: Al principio del proyecto creamos el archivo "contacto.html" del cual tendra una estrutura/cabecera/pie de pagina, similar al index.html, por ello copiamos todo el codigo de este y eliminamos el contenido con los articulos dejando la estructura, es decir desde el section id="sobremi" hasta su cierre, eliminamos dejando el div id contenido y su cierre. Ahora en el agregaremos los atributos.
+
+(14) ENVIAMAIL.PHP: Lo que haremos aca es crear un archivo php del cual nos permitira enviar los datos cargados de Nombre/Mail/Mensaje cargados en contacto.html via mail/mostrarlos en la pagina del navegador. Luego de crear la primera parte, añadiremos el diseño o visualizacion de contacto.html cortando en el form y pegando dentro lo que contiene entre la etiqueta <?php y ?> para que haga el trabajo del enviar el mail pero con el estilo grafico ya creado. Osea para que no se vea la etiqueta solo en blanco y negro, sino con gris/blanco, osea en estilo php puro y duro sino con todos los efectos añadidos de contacto.html.
+
+
+(15) XAMPP: Como ya sabemos todo el pyoyecto este y los demas estan dentro de la carpeta "htdocs" del programa XAMPP el cual emula ser un servidor, pudiendon asi crear un archivo .php y que este pueda interpretarlo y mostrarlo. Por ello tenemos que abrir el programa y checkear que tanto el boton Apache y MySQL esten encendidos para poder trabajar. Causo mucho dolor de cabeza pero funciono al final, compila correctamente enviamail.php. Lo unico es que al mail no lo va a enviar porque debe ser montado en un servidor de mail real y es por ello que da este error por debajo de lo que cargamos al compilar 
+
+(Warning: mail(): Failed to connect to mailserver at "localhost" port 25, verify your "SMTP" and "smtp_port" setting in php.ini or use ini_set() in E:\Facultad\Programas\XAMPP\htdocs\Estudios\HTML y CSS3\C4-08-Ejercisio\blog\php\enviamail.php on line 100).
+
+
+(16) FIN DEL BLOG: Las explicaciones finalizan en el Capitulo 8 (Video:15 ES_214_08_12_10). Pudimos crear el index/contacto/enviamail.php pero quedan items en la pagina que se pudieran completar y hacer mas robusto aun nuestro blog, por ello como tarea sera terminar cada apartado aplicando lo aprendido.
+
+(!!!: MODIFICACIONES PROPIAS: Indicare mediante 3 signos de admiracion comentada todas aquellas modificaciones propias que hare en el blog. Esto debido a que en los videos se ven codigos que no se explican/ no quedan bien con solo lo explicado entonces por eso hare correcciones para que se visualice y funcionen correctamente.)
+-->
+
+
+
+
+<!DOCTYPE html> <!-- "!"+TAB (1)-->
+
+<html>
+	
+	<head manifest="/manifiesto/manifiesto.cache">
+			<!-- A estas lineas del autocompletado, las comento porque no las voy a usar. La que si voy a usar es <meta http-equiv="refresh" content="1" / entre otras que no dejare comentadas>	
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Document</title> -->
+
+			<title>WebLog de Mauricio Ruben Banega</title> <!--Añade el titulo en la pestaña -->
+
+			<meta name="description" content="WebLog de Mauricio Ruben Banega"/> <!--Añade una descripcion a la pagina -->
+
+			<meta name="keywords" content="weblog, blog, Mauricio Ruben Banega, diseño, multimedia" /> <!--Añade las palabras claves/contenido que contiene la pagina web para agilizar la busqueda. -->
+
+			<!-- <meta http-equiv="refresh" content="5" /> (2) Refresco de pagina --> 
+
+			<link rel=stylesheet href="css/estilo.css" type="text/css" />
+
+
+	</head>
+
+	<body>
+
+
+		<div id="cajaheader"> <!-- Crearemos varios div que nos serviran para maquetar/dibujar. Con este div unicamente crearemos una caja horizontal que contendra el contenido del header.-->
+		</div>
+
+		<div id="principal" itemspscope itemtype="http://data-vocabulary.org/Person"> <!-- Crearemos este otro div el cual contendra todo el contenido de la pagina. Lo vamos a cerrar por debajo del footer y arriba de body. Para organizarme mejor correre como explica en el video, todo el codigo que esta a la altura de este div un espacio a la derecha entionces se selecciona todo el codigo contenido y se aprieta tabulador para correrlo. Para deshacer CTL+Z.
+
+		(4)(4.1) Ademas tenemos dentro del div un itempscope lo explicado en el info donde podre asignar los metadatos de persona (name/nickname/title/photo/role, etc.). Esto lo sentenciamos dentro de la etiqueta span y dentro el itemprop del tipo que sea. Esto si bien no modifica graficamente nada, sirve para indezar mejor la pagina web y mejorar la busqueda de la misma en los motores de busqueda. -->
+
+
+			<header> <!--Cabecera de la pagina -->
+
+				<div id="logo"> <!--Copiamos el codigo del logo vectorial svg  (descargado en carpeta/img). Usaremos este id para darle estilo tmb desde estilo.css-->
+
+					 <!--Aclaracion: Cambio el tamaño del logo descargado y dejo registro de los valores antes de cambiarlos por si queda mal, los valores de svg por defecto son: width="24" height="24" viewBox="0 0 24 24-->
+					<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7.753 18.305c-.261-.586-.789-.991-1.871-1.241-2.293-.529-4.428-.993-3.393-2.945 3.145-5.942.833-9.119-2.489-9.119-3.388 0-5.644 3.299-2.489 9.119 1.066 1.964-1.148 2.427-3.393 2.945-1.084.25-1.608.658-1.867 1.246-1.405-1.723-2.251-3.919-2.251-6.31 0-5.514 4.486-10 10-10s10 4.486 10 10c0 2.389-.845 4.583-2.247 6.305z"/></svg>
+				</div>
+
+				<div id="tipo">
+				<h1><span itemprop="name">Mauricio Ruben Banega</span></h1> <!--(4.1:NAME)-->
+
+				<h2><span itemprop="title">Creativo Multimedia</span></h2> <!--(4.1:TITLE)-->
+				</div>
+
+				<nav>
+					<ul> <!--Enlaces de la pagina web. En donde a cada enlace haremos archivos como este de index pero para noticias.html/sobremi.html, etc que guardaremos en la carpeta blog. -->
+
+						<!--(8) Creamos la etiqueta "canvas" para dibujar el lienzo de cada icono. Comenzaremos dandole un style desde aca pero luego crearemos un estilo visual que controlaremos tambien desde CSS en estilo.css, añadimos tambien un retorno de carro br entre el canvas y el texto.-->
+
+						<li><a href="index.html"><canvas id="iconoinicio" width="50" height="50"></canvas><br/>Inicio</a></li>
+
+						<li><a href="noticias.html"><canvas id="icononoticias" width="50" height="50"></canvas><br/>Noticias</a></li>
+
+						<li><a href="sobremi.html"><canvas id="iconosobremi" width="50" height="50"></canvas><br/>Sobre mi</a></li> <!--(8)-->
+
+						<li><a href="contacto.html"><canvas id="iconocontacto" width="50" height="50"></canvas><br/>Contacto</a></li>
+					</ul>
+				</nav>
+
+			</header>
+
+			<div id="contenido"> <!-- (10) Aqui maquetaremos el contenido desde "estilo.css". Este div no fue creado apenas comenzo el proyecto. Contendra hasta antes de comenzado el footer. -->
+
+
+
+			<section id="sobremi"> <!--Aca pondré informacion sobre mi. Ademas crearemos un id "sobremi" para poder maquetar su diseño desde estilo.css -->
+				
+				<span itemprop="photo"><div id="mifoto"></div><!--<img src="photo/mauriciobanegacvfoto.jpg" width=120px height=140px /> --> </span> <!--(4.1:PHOTO)-->
+				<p>Soy un estudiante de programacion en la carrera Analista en Sistemas con constante preparacion sobre multiples lenguajes de programacion; HTML/CSS3 - Java - Sql entre otros. Me gusta tambien la musica pero es mi hobby. Conformo una familia de 4 hermosa. Les dejo mi web, <span itemprop="url"><a href="http://www.mb.com.ar">http://www.mb.com.ar</a></span>.</p><!--(4.1:URL) -->
+
+				<!--Realizamos un cambioen el Cap.8 donde comentaremos la foto ya que la llamaremos desde estilo.css mediante el div que crearemos como elemento desde alli. -->
+
+			</section>		
+
+
+
+
+			<aside> <!--En aside, pondremos contenido tangencias, es decir datos antiguos que llevaran a hipervinculos. Creo que no lo muestra en el video pero tambien debajo del subtitulo h5 creamos la etiqueta <ul> que contendra a los li/a. -->
+			
+				<h5>Post Previos</h5>
+			<ul>
+				<li><a href=""><time>2011-01-01</time> / Feliz Año Nuevo</a></li>
+				<li><a href=""><time>2011-05-13</time> /Noticias Mayo</a></li>
+				<li><a href=""><time>2011-11-30</time> /Noticias Noviembre</a></li>
+				<li><a href=""><time>2011-12-04</time> /Noticias Abril</a></li>
+			</ul>
+
+			</aside>
+
+
+			<section> <!--En el section van puestos los articulos que contendra el blog, en total 3 articulos donde c/u contiene su titulo/subtitulo/contenido.  -->
+				
+				<article>
+
+					<div id="logoproximostemas"></div> 
+					<time>2022-04-28</time>
+					<h3>Proximos Temas</h3>
+					<h4>En busqueda de nuevos temas para grabar</h4>
+					<p>Tengo ya en mente hacer varios temas de diferentes tipos de ritmos para grabar, cuarteto, rock, latinos romanticos, y folcklore, uno de cada uno para poder ampliar mi repertorio y tener un catagolo de referencia mas amplio para tenr y escucharme ya que es algo que me encanta ademas de mostrarlo. Por contrataciones escribirme al mail <span itemprop="contact">mauriciorbanega.ejemplo@gmail.com</span>. Ademas les dejo un audio que pueden escuchar de mi tema de cuarteto que ya hice asi como tambien el video de otro tema en Youtube.</p> <!--(4.1:CONTACT) -->
+					
+					<video controls="controls" width=300px height=150px preload="preload" >	<!--Insersion de Videos en los 3 formatos mp4/ogg/webm. El formtato mp4 se declara el type como mpeg.-->
+
+
+						<source src="video/VideoGrabacionMB.mp4" type="video/mpeg" /> 
+						<source src="video/VideoGrabacionMB.ogg" type="video/ogg" />
+						<source src="video/VideoGrabacionMB.webm" type="video/webm"/>
+
+						Tu navegador no soporta video, haz click <a href="https://www.htmlcinco.com/category/navegadores/">AQUI</a> para descargar un navegador disponible.
+
+					</video> <br>
+
+					
+					<audio src="audio/AudioGrabacionMB.mp3" controls="controls" preload="preload"> <!--Insersion de Audio-->
+
+						Tu navegador no soporta audio.<a href="https://www.htmlcinco.com/category/navegadores/">AQUI</a> para descargar un navegador disponible.
+
+					</audio>
+
+
+
+				</article>
+
+
+				<article>
+
+					<div id="logoplanesafuturo"></div>
+					<time>2022-04-20</time>
+					<h3>Planes a futuro</h3>
+					<h4>Preparacion en lenguajes de programacion</h4>
+					<p>Ademas de tener gustos por la musica tambien los tengo en algo que me gusta que es programar, pero se que tengo que capacitarme para llegar a cumplir esos objetivos. Por ello es que estoy haciendo este curso de HTML5 y CSS3. Agradezco a <span itemprop="friend">Braian Zamudio</span> por darme esa posibilidad.</p><!--(4.1:FRIEND) -->
+
+				</article>
+				
+
+				<article>
+
+					<div id="logoplanesdeviaje"></div>
+					<time>2022-04-28</time>
+					<h3>Planes de Viaje</h3>
+					<h4>Mirando al futuro</h4>
+					<p>Me gustaria poder trabajar programando, pero poder tambien conocer lugares en donde poder instalarme y conocer ya que se que la vida y el mudno tienen esas esencias muy poderosas que unicamente te otorgan un viaje, lo esencial que tiene cada lugar. Y que mejor si a la vez trabajo en el no? </p>
+
+				</article>
+
+
+			</section>
+
+			</div> <!-- Cierra div contenido. -->
+
+			<footer> <!--En footer (pie de pagina) podremos el Coryright de la pagina, pero podemos poner el Aviso Legal/Privacidad o cualquier informacion importante que deba contener la web y que deba ponerse por debajo. Comentare como quedaria: <h6> (c) 2022 - WebLog Mauricio Ruben Banega </h6>; pero ahora haremos una VCARD o carta de presentacion dentro de footer/h6, que quedara de la siguiente manera. --> 
+
+				<h6> 
+
+					<div class="vcard">  <!--(5) - Vemos que esta vez al span le sigue class="" y no itemprop. Esto es porque no estamos enumerando metadatos sino mas bien clases que especifican al navegador, si nuestro nombre pero tambien pais/provincia/cod-postal/telefono/mail, etc. -->
+
+						<div><span class="name">Mauricio Ruben Banega</span>-<span class="locality">Córdoba Capital</span><span class="region">Córdoba</span>-<span class="postal-code">5000</span>-<span class="country-name">Argentina</span></div>
+						<div><span class="tel">+54 9 351-555-6666</span> - <span class="email">mauriciorbanega.ejemplo@gmail.com</span></div>
+
+
+					</div>
+
+				</h6> 
+
+					<!--(6) Contador Java & HTML5 usando el localStorage -->
+					<script type="text/Javascript"> 
+
+						if (localStorage.pagecount){localStorage.pagecount = Number(localStorage.pagecount)+1;} 
+						else{localStorage.pagecount = 1;}
+
+							document.write("Has visitado mi página " +localStorage.pagecount+ " veces.");
+
+					</script>
+
+					<!--(7) Contador Java & HTML5 usando el sessionStorage -->
+
+					<script type="text/Javascript"> 
+
+						if (sessionStorage.pagecount){sessionStorage.pagecount = Number (sessionStorage.pagecount)+1;}
+						else{sessionStorage.pagecount = 1;}
+
+							document.write("En esta sesion has visitado mi pagina "+sessionStorage.pagecount+" veces");
+
+					</script>
+
+			</footer>
+
+
+		</div> <!--Div que cierra y contiene todo lo de id principal -->
+
+
+	</body>
+
+
+
+</html>
+
+
+
+<!--(8) - CANVAS:ICONO "SOBRE MI": El 1º: es un circulo, el 2º: medio circulo que dibuja el icono.-->
+
+
+<script type="text/javascript">
+
+	var micolor="Black"; /*-Variable de color en comun para todo el dibujo*/
+	var miotrocolor="Grey";
+	var mitercercolor="White";
+
+	var escala=0.5; /*-Variable de escala en comun para todo el dibujo, multiplicando valores de x,y,radio*/
+	
+	var c=document.getElementById("iconosobremi"); /*-Establecemos una variable donde elegimos un elementById sobre el documento "sobremi", coincidiendo con el id creado en el canvas arriba.*/
+	var cxt=c.getContext("2d"); /*-Decimos que contexto tendra, en este caso 2d*/
+
+	cxt.fillStyle=(micolor); /*-Elegimos de que color dibujar (Black), o mejor creamos una variable que compartiran ambos dibujos dentro del script donde asignaremos un color en comun.*/
+	cxt.beginPath(); /*-Indicamos que arrancaremos un recorrido*/
+	cxt.arc(escala*50,escala*25,escala*20,0,Math.PI*2,true); /*-Dibujamos el circulo*/
+	cxt.closePath; /*-Cerramos el recorrido*/
+	cxt.fill(); /*-Rellena con el color seleccionado en micolor*/
+
+	cxt.fillStyle=(micolor); /*-Elegimos de que color dibujar*/
+	cxt.beginPath(); /*-Indicamos que arrancaremos un recorrido*/
+	cxt.arc(escala*50,escala*90,escala*40,Math.PI,Math.PI*2,false); /*-Dibujamos medio circulo*/
+	cxt.closePath; /*-Cerramos el recorrido*/
+	cxt.fill(); /*-Rellena con el color seleccionadoen micolor*/
+
+
+ /* - CANVAS:ICONO "CONTACTO": El 3º y 4º es identico al bloque (1º y 2º) pero corrido -10 grados en "x". Y el 5º y 6º es identico al par (1º y 2º o 3º y 4º) pero corrido +10 grados en "y"--> */
+
+
+	var c=document.getElementById("iconocontacto"); /*-Establecemos una variable donde elegimos un elementById sobre el documento "contacto", coincidiendo con el id creado en el canvas arriba.*/
+	var cxt=c.getContext("2d"); /*-Decimos que contexto tendra, en este caso 2d*/
+
+	cxt.fillStyle=(miotrocolor); /*-Elegimos de que color dibujar (Gris), o mejor creamos una variable que compartiran ambos dibujos dentro del script donde asignaremos un color en comun.*/
+	cxt.beginPath(); /*-Indicamos que arrancaremos un recorrido*/
+	cxt.arc(escala*50-10,escala*25,escala*20,0,Math.PI*2,true); /*-Dibujamos el circulo*/
+	cxt.closePath; /*-Cerramos el recorrido*/
+	cxt.fill(); /*-Rellena con el color seleccionadoen mi otro color*/
+
+	cxt.fillStyle=(miotrocolor); /*-Elegimos de que color dibujar*/
+	cxt.beginPath(); /*-Indicamos que arrancaremos un recorrido*/
+	cxt.arc(escala*50-10,escala*90,escala*40,Math.PI,Math.PI*2,false); /*-Dibujamos medio circulo*/
+	cxt.closePath; /*-Cerramos el recorrido*/
+	cxt.fill(); /*-Rellena con el color seleccionado en mi otro color*/
+
+	cxt.fillStyle=(micolor); /*-Elegimos de que color dibujar (Black), o mejor creamos una variable que compartiran ambos dibujos dentro del script donde asignaremos un color en comun.*/
+	cxt.beginPath(); /*-Indicamos que arrancaremos un recorrido*/
+	cxt.arc(escala*50+10,escala*25,escala*20,0,Math.PI*2,true); /*-Dibujamos el circulo*/
+	cxt.closePath; /*-Cerramos el recorrido*/
+	cxt.fill(); /*-Rellena con el color seleccionadoen micolor*/
+
+	cxt.fillStyle=(micolor); /*-Elegimos de que color dibujar*/
+	cxt.beginPath(); /*-Indicamos que arrancaremos un recorrido*/
+	cxt.arc(escala*50+10,escala*90,escala*40,Math.PI,Math.PI*2,false); /*-Dibujamos medio circulo*/
+	cxt.closePath; /*-Cerramos el recorrido*/
+	cxt.fill(); /*-Rellena con el color seleccionado en micolor*/
+
+
+	/* - CANVAS:ICONO "INICIO": Creamos 3 circulos donde variaremos su radio para hacerlos de tamaños distintos. */
+
+	var c=document.getElementById("iconoinicio"); /*-Establecemos una variable donde elegimos un elementById sobre el documento "sobremi", coincidiendo con el id creado en el canvas arriba.*/
+	var cxt=c.getContext("2d"); /*-Decimos que contexto tendra, en este caso 2d*/
+
+	cxt.fillStyle=(micolor); /*-Elegimos de que color dibujar*/
+	cxt.beginPath(); /*-Indicamos que arrancaremos un recorrido*/
+	cxt.arc(escala*50,escala*50,escala*40,0,Math.PI*2,true); /*-Dibujamos circulo mayor*/
+	cxt.closePath; /*-Cerramos el recorrido*/
+	cxt.fill(); /*-Rellena con el color seleccionadoen micolor*/
+
+	cxt.fillStyle=(mitercercolor); /*-Elegimos de que color dibujar (Black), o mejor creamos una variable que compartiran ambos dibujos dentro del script donde asignaremos un color en comun.*/
+	cxt.beginPath(); /*-Indicamos que arrancaremos un recorrido*/
+	cxt.arc(escala*50,escala*50,escala*30,0,Math.PI*2,true); /*-Dibujamos circulo mediano*/
+	cxt.closePath; /*-Cerramos el recorrido*/
+	cxt.fill(); /*-Rellena con el color seleccionado en mitercercolor*/
+
+	cxt.fillStyle=(micolor); /*-Elegimos de que color dibujar (Black), o mejor creamos una variable que compartiran ambos dibujos dentro del script donde asignaremos un color en comun.*/
+	cxt.beginPath(); /*-Indicamos que arrancaremos un recorrido*/
+	cxt.arc(escala*50,escala*50,escala*20,0,Math.PI*2,true); /*-Dibujamos circulo pequeño*/
+	cxt.closePath; /*-Cerramos el recorrido*/
+	cxt.fill(); /*-Rellena con el color seleccionado en micolor*/
+
+
+	/* - CANVAS:ICONO "NOTICIAS":  */
+
+	var c=document.getElementById("icononoticias"); /*-Establecemos una variable donde elegimos un elementById sobre el documento "sobremi", coincidiendo con el id creado en el canvas arriba.*/
+	var cxt=c.getContext("2d"); /*-Decimos que contexto tendra, en este caso 2d*/
+
+	cxt.fillStyle=(micolor); /*-Elegimos de que color dibujar (Black), o mejor creamos una variable que compartiran ambos dibujos dentro del script donde asignaremos un color en comun.*/
+	cxt.beginPath(); /*-Indicamos que arrancaremos un recorrido*/
+	cxt.arc(escala*50,escala*50,escala*20,0,Math.PI*2,true); /*-Dibujamos el circulo*/
+	cxt.closePath; /*-Cerramos el recorrido*/
+	cxt.fill(); /*-Rellena con el color seleccionado en micolor*/
+
+	cxt.fillStyle=(micolor); /*-Elegimos de que color dibujar*/
+	cxt.beginPath(); /*-Indicamos que arrancaremos un recorrido*/
+	cxt.arc(escala*50,escala*50,escala*40,Math.PI,Math.PI*2,false); /*-Dibujamos medio circulo*/
+	cxt.closePath; /*-Cerramos el recorrido*/
+	cxt.fill(); /*-Rellena con el color seleccionadoen micolor*/
+
+	
+</script>

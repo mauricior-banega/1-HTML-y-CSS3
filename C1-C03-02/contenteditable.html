@@ -1,0 +1,56 @@
+<html> <!-- Cualquier parte de un documento en HTML5 puede ser editable atravez de estas formulas -->
+
+	<body>
+
+		
+			<h1>Nota adhesiva</h1>
+			
+			<section id="editable" contenteditable="true">	<!-- Creamos una seccion con el id="editable" con la propiedad contenteditable=true. De aca para abajo, desde el navegador veremos no se puede editar Nota adhesiva, pero si podemos cambiar el Titulo, Texto para la nota y los elementos de la lista no ordenada asi como tambien si damos Enter, apliamos los elementos de la lista. -->
+
+				<h2>Titulo</h2>	
+				<p> Texto para la nota </p2>		
+
+					<ul> 
+
+						<li>Elemento 1</li>
+						<li>Elemento 2</li>
+						<li>Elemento 3</li>
+
+					</ul>
+
+
+
+			</section>
+
+	</body>
+
+
+	<!-- Ahora, en referencia al video nº17 de HTML y CSS3, introduciremos videos en la web. Aqui deberemos descargar en la carpeta donde guardamos este archivo los videos en formatos (ogv,mp4,webm) para que dependiendo del navegador la pagina pueda reproducirlos. Lo haremos dentro de un <html> </html> como estara a continuacion.-->
+
+
+
+
+
+
+	<video src="sintel.ogv" controls="controls" width=300 height=150>	
+		Tu navegador no soporta video HTML5 <!-- Mostramos de esta manera que aparezca este aviso en caso que no pueda reporoducir el video el navegador que se este usando.-->
+	</video>
+
+		 <!-- NOTA: Para mejor conmpilacion quitaremos el "src" fuera de la etiqueta video, añadiendo un "source src" con todos los formatos disponibles para que el navegador elija/reproduzca el soportado. Los archivos todos tienen el mismo nombre pero son de 3 formatos distintos como habiamos indicado, Sublime te muestra el formato de c/u.-->
+
+
+
+
+	 <video controls="controls" width=300 height=150>	
+
+
+	 	<source src="sintel.ogv" type="video/ogv"/>
+	 	<source src="sintel.mp4" type="video/mp4"/>
+	 	<source src="sintel.webm" type="video/webm"/>
+		
+		<!-- Al compilar veremos que aparecen 2 videos, el que esta puesto con el src que creamos primero, y otro que es el que eligio del segundo src source que creamos. Eligio uno de los 3, no los 3 juntos. -->
+
+	</video>
+
+
+</html>

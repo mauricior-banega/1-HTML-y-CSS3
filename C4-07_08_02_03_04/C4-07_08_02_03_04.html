@@ -1,0 +1,66 @@
+<!-- HTML y CSS3 - Capitulo 4 (Video 1/2/3): 07_08_02/03/04- Columnas 2: De las columnas creadas haremos que el espaciado entre ellas sea cuantificable mediante el paramentro column-gap:ejemplo 20px. (2do Video) Lineas separadoras de las Columnas: Mediante el parametro column-rule, pudiendo aclarado mas abajo hacer separadores de lineas/puntos/guiones, doble lineas, etc. (3er Video) Imagen insertada entre las columnas del párrafo, mediante el parametro <img src="y el nombre del archivo"> donde le daremos un width y un hight para calibrarlo y que queda bien dentro del mismo.  --> 
+
+
+
+<html>
+
+
+
+	<head>
+
+		<style type="text/css">
+			
+			h1 
+			{
+				text-align: center; /* Asi alineamos/centramos el h1 (Titulo del articulo) */
+			}
+
+
+			h2 
+			{
+				text-align: center; /* Asi alineamos/centramos el h2 (Subtitulo)  */
+			}
+
+			.articulo /*Aca le ponemos las columnas al div de la clase "articulo", con el metodo column-count:; y sus respectivas compatibilidades. */
+			{
+				column-count:4;
+				-moz-column-count:4;
+				-webkit-column-count:4;
+				-o-column-count:4;
+
+				column-gap: 20px; /* Parametro de cuantificacion de margen de columna*/
+				-moz-column-gap: 20px;
+				-webkit-column-gap: 20px;
+				-o-column-gap: 20px;
+
+				column-rule: 1px solid black; /* Parametro Linea separadora de columnas*/
+				-moz-column-rule: 1px inset black;
+				-webkit-column-rule: 1px solid black;
+				-o-column-rule: 1px solid black;
+
+				/*El estilo de column-rule puede variar, en este caso usamos solid black, pudiendo usarse tambien grey que queda mas estilizado. Pero existen mas como por ejemplo: dotted (linea de puntos) / dashed (lineas hecha de lineas o guiones verticales) / double (doble linea) / groove (doble linea) / ridge (invierte el degradado de color) / inset (en px=4 se nota, es una doble linea una del color elegido y otra un tono mas abajo) / outset (efecto inverso de doble linea a inset)/ ;todos estos parametros dependen del navegador que usemos.*/
+			}
+
+
+		</style>
+
+	</head>
+
+
+	<body>
+		<h1>Titulo del Articulo</h1>
+		<h2>Subtitulo</h2>
+		
+		<div class="articulo"> 
+
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Porttitor rhoncus dolor purus non. Sodales neque sodales ut etiam sit. Eget duis at tellus at urna condimentum. Integer vitae justo eget magna fermentum iaculis eu non.  <img src="Cesar.jpg" width=%100 height=80px>Vulputate eu scelerisque felis imperdiet. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. Consectetur purus ut faucibus pulvinar elementum integer enim neque. Ullamcorper malesuada proin libero nunc consequat interdum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique senectus. Sit amet dictum sit amet justo donec enim diam vulputate. Lorem ipsum dolor sit amet consectetur adipiscing elit duis. Pellentesque dignissim enim sit amet.
+
+
+
+		</div>
+		
+	</body>
+
+
+
+</html>

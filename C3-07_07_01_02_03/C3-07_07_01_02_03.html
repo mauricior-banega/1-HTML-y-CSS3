@@ -1,0 +1,77 @@
+
+<!-- HTML y CSS3 - Capitulo 3 (Video 15/16/17/): 07_07_01/02/03 - Animacion: (1er Video) Usaremos el metodo @keyframes para llamar a las animaciones (animation) del div. Haremos que cambie el color de fondo desde azul a rojo usando un from (desde 0%) a un to (hasta %100). (2do Video) Comentaremos lo hecho usando los from/to para reemplazarlos por porcentajes directamente, para asi graduar el color de fondo en mas veces que solo 2 usando los anteriores mencionados. (3er Video) Agredaremos la variable position:relative, en el div y agregaremos los atributos left/top para despazar en x e y pixeles de acuerdo al % y el color. El efecto es que el cuadrado div cambie de color desplazandose en 4 posiciones y colores distintos. --> 
+
+
+
+<html>
+	
+
+
+	<head>
+
+		<style type="text/css">
+
+
+			div {
+
+					width: 100px;
+					height: 100px;
+					background:blue;
+					position: relative;
+					animation: primeraAnimacion 10s; /*Decimos que animation dure 10 segundos */
+					-webkit-animation: primeraAnimacion 10s;
+
+				}
+
+  			/* Cometamos esto realizado para explicar el 2do Video, con los mismos metodos.
+
+				@keyframes primeraAnimacion /*Con este metodo llamamos a las animaciones de CSS, le damos el nombre que le dimos a animacion (primeraAnimacion en este caso). Haremos que cambie de color de fondo (azul a rojo en 2s). Si lo hacemos desde Mozilla no compilara sino hacemos el -webkit-, entonces haremos el mismo mas abajo. 
+				{
+					from {background: blue;} 
+					to {background: red;} 
+				}
+
+			    @-webkit-keyframes primeraAnimacion 
+				{
+					from {background: blue;} /* blue no adquiere el color morado, pero compila igual
+					to {background: red;} 
+				} 
+
+			*/
+				@keyframes primeraAnimacion /*Lo que haremos aca es el reemplazo de los form/to por los pocercentajes de estadio en cada color atravez de los 10 segundos. Agregamos tmb su compatibilidad con webkit. */
+
+				{
+					0% {background: blue; left: 0px;top: 0px;} 
+					20% {background: red; left: 100px;top: 0px;} 
+					50% {background: yellow; left: 100px;top: 100px;} 
+					75% {background: green; left: 0px;top: 100px;}
+					100% {background: blue; left: 0px;top: 0px;} /*Para que el green que estaba al %100 no de el zarpaso de pasar de verde a azul (color inicial) de repente, ponemos que verde sea el %75 y que finalize con el color inicial en %100. */
+				}
+
+			    @-webkit-keyframes primeraAnimacion 
+
+				{
+					0% {background: blue; left: 0px;top: 0px;} 
+					20% {background: red; left: 100px;top: 0px;} 
+					50% {background: yellow; left: 100px;top: 100px;} 
+					75% {background: green; left: 0px;top: 100px;}
+					100% {background: blue; left: 0px;top: 0px;}
+				} 
+
+
+
+
+		</style>
+
+
+	</head>
+
+
+	<body>
+			<div></div>
+	</body>
+
+
+
+
+</html>

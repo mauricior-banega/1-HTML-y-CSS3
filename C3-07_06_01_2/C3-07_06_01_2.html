@@ -1,0 +1,80 @@
+<!-- HTML y CSS3 - Capitulo 3 (Video 13/14): 07_06_01/02 - Transicion: (1er Video) Realiza un transicion del div o recuadro creado, podemos desplazarlo en ancho o largo (en el ejemplo es x=ancho) dandole un tiempo de desplazamiento variable, comentaremos este primero para dejar el 2do completo. (2do Video) Ahora agregaremos a este primero realizar dezplazamiento tambien en y=largo y girarlo, conteniendo dentro el texto Hola/Bienvenid@.--> 
+
+<html>	
+
+
+	<head>
+
+		<style type="text/css">
+
+		/*
+	 	div
+		{	
+			 
+			 
+			 width:100px;
+			 height:100px;
+			 background-color:red;
+
+			 transition:width 5s; /*Con este metodo decimos que la anchura tarde 5s en completarse, lo realiza al pasar el cursor sobre el div, aumentara hasta 300px como lo indicamos en el div: hover. Agregamos las compatibilidades. 
+			 -moz-transition:width 5s;
+			 -webkit-transition:width 5s;
+			 -o-transition:width 5s;
+		}
+
+			div:hover { width:300px; }
+		*/
+
+			 
+
+		div
+		{	
+			 
+			 font-family: Arial, Verdana;
+			 font-size: 24px;
+			 font-weight: bold;
+
+			 width:100px;
+			 height:100px;
+			 background:red;
+
+			 transition:width 2s, height 2s; 
+		    /*-moz-transition:width 2s, height 2s, -moz-transform 2s; */
+			 -webkit-transition:width 2s, height 2s, -webkit-transform 2s;
+			 -o-transition:width 2s, height 2s, -o-transform 2s;
+			 
+			 /*CUIDADO: Me llevo 2 hs darme cuenta, si al parametro de arriba transform 2s le ponemos ":" el mismo el div NO gira, en este caso hay que ponerlo sin los dos puntos y correra segun el ejemplo. Para los transform rotate al que le pondremos los grados ej 180, estos sin van con dos puntos entre parentesis acompañado de la constante rotate. */
+		}
+
+			
+	      div:hover {  
+					 	width:200px; 
+					 	height:200px;
+					 	transform:rotate(180deg);
+
+			    	 /*-moz-transform: rotate(180deg);*/
+			     	  -webkit-transform:rotate(180deg);
+					  -o-transform:rotate(180deg);
+
+					 }
+
+
+
+
+		</style>
+
+	</head>
+
+
+	<body>
+		
+		<div>
+			Hola!
+			Bienvenid@
+		</div>
+
+	</body>
+
+
+
+</html>

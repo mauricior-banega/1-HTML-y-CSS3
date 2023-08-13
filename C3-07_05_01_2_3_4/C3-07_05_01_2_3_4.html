@@ -1,0 +1,52 @@
+<!-- HTML y CSS3 - Capitulo 3 (Video 9/10/11/12): 07_05_01/2/3/4 - Transformacion en 2D: (1er Video)-Crearemos una caja que la correremos de lugar los pixeles que le indiquemos usando el metodo transform:translate. (2do Video) Creamos el mismo metodo pero con la propiedad de transform: rotate, donde no solo rotamos el div sino tambien el texto, siendo tambien seleccionable/editable. (3er Video) Comentado, entonces quitarlos para ver los cambios, usaremos aqui la propiedad scale, que nos permite reducir el volumen del div en x e y. (4to Video) Usaremos el metodo skew, que sirve para distorcionar en gradosº el div, en x e y.--> 
+
+
+<html>
+	
+	<head>
+		<style type="text/css">
+
+			div {
+
+					width: 200px;
+					height:  200px;
+					background-color: green;
+					transform: translate(50px, 100px); /*Con este metodo TRANSLATE podemos trasladamos el cuadrado a los pixeles que indiquemos, este esta corrido al compilar del punto inicial*/
+					-moz-transform: translate(50px, 100px); /*Como vimos en ej anteriores este metodo de transformacion podemos agregarle compatibilidad con los navegadores mozilla/webkit/opera para que los ejecuten correctamente*/
+					-webkit-transform: translate(50px, 100px);
+					-o-transform: translate(50px, 100px);
+
+					transform: rotate(30deg); /*Con este metodo ROTATE podemos rotar el cuadrado a los deg (grados) que queramos, tener n cuenta que ya se aplico la translacion anterior. Y tambien le agregamos las compatibilidades.*/
+					-moz-transform: rotate(30deg);
+					-webkit-transform: transform: rotate(30deg);
+					-o-transform: rotate(30deg);
+
+					
+					/*
+					margin: 200px;
+					transform: scale(2,1); /*Con este metodo SCALE podemos duplicar la escala del cuadrado a los las veces que queramos en x e y. Todo este metodo estara comentado, en caso de querer verlo habra que borrar lo comentado, (tener en cuenta que aplicara las 2 transformaciones arriba creadas). Y tambien le agregamos las compatibilidades.
+					-moz-transform: scale(2,1);
+					-webkit-transform: scale(2,1);
+					-o-transform: scale(2,1);
+
+				    */
+
+					transform: skew(15deg,15deg); /*Con este metodo SKEW podemos distorcionar aplicando una perspectiva ortografica sobre el div con el que estemos trabajando en x e y, tener en cuenta que ya se aplico las 2 translacion anteriores. Y tambien le agregamos las compatibilidades.*/
+					-moz-transform: skew(15deg,15deg)
+					-webkit-transform: skew(15deg,15deg)
+					-o-transform: skew(15deg,15deg)
+
+			    }
+
+		</style>
+
+	</head>
+
+
+
+	<body>	
+
+				<div> Soy un poco de texto para el ejemplo/Soy un poco de texto para el ejemplo/Soy un poco de texto para el ejemplo </div>
+	</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!-- HTML y CSS3 - Capitulo 2 (Video 6): 06_01_01 - Formularios: Crearemos en el primer video un formulario donde pida un nombre y apellido con su campo para llenar sombreado de color verde. Ademas; un campo para llenar un email (donde daremos indicio de como poner el mail y se pintara de rojo si esta incorrecto)/fecha (con un calendario para que el cliente elija poniendocomo definido un dia especifico de partida)/ Encuesta, para elejir opciones en una barra de estado. Otra fila llamada Color, donde podemos elegir un color; y otro campo del tipo "number" que nos permite seleccionar valores max y min para elegir, por ejemplo un puntaje, como pregunta en (Que te parece esta web?).--> 
+
+<html>
+
+	<head>
+
+							   <!-- ACLARACION: El corchete lo hacemos con Alt+91 "[]"" --> 
+		 				       <!-- ACLARACION: Con el metodo required que le dimos al style, decimos que TODOS los campos definidos con esas propiedades la tendran. --> 
+							   <!-- ACLARACION: El primer px desplaza el shadow (sombra) para la izq o derecha en x (horizontal) y el segundo en y (vertical). -->
+		<style type="text/css"> 
+		 [required] {          
+		 				border-color: green; 
+		 				box-shadow: 0px 0px 5px grey;   
+		            }        
+
+		            :invalid
+		            {
+		                border-color: red;
+		 				box-shadow: 0px 0px 5px red;
+		            }
+
+		            		 
+
+		</style>
+							  <!-- Nota: El metodo :ivalid sirve para decirle al usuario que si ingresa algunos de todos los datos erroneos a los establecido en la propiedad de cada campo, pinte el mismo en color rojo. Notese que si es distinto al formato de value del mail se podra en rojo asi como tambien sino ingresase ningun valor en el input text. -->
+
+	</head>
+
+
+
+	<body>
+
+		<table>
+
+
+
+			<tr>
+
+				<td> Nombre </td> 
+				<td> <input type="text" required> </td>
+
+			</tr>
+
+
+
+			<tr>
+
+				<td> Apellido </td> 
+				<td> <input type="text" required> </td>
+
+			</tr>
+
+
+			<tr>
+
+				<td> Email </td> 
+				<td> <input type="email" value="usuario@cominio.com"/> </td>
+
+			</tr>
+
+
+			<tr>
+
+				<td> Fecha </td> 
+				<td> <input type="date" value="2022/04/10"/> </td>
+
+			</tr>
+
+
+			<tr>
+
+				<td> Encuesta </td> 
+				<td> <input type="range" max="10" min="0" value="5" step="5" > </td>
+
+			</tr>
+
+
+			<tr>
+
+				<td> Color </td> 
+				<td> <input type="color" place holder="e.g. #cecece"> </td>
+
+			</tr>
+
+
+			<tr>
+
+				<td> Que te parece esta web? </td> 
+				<td> <input type="number" step="1" min="0" max="12" value="5"> </td>
+
+			</tr>
+
+		</table>
+
+
+	</body>
+</html>

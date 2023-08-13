@@ -1,0 +1,29 @@
+<!-- HTML y CSS3 - Capitulo 3 (Video 7): 07_03_02 - WorkWrap: Explicaremos que este metodo sirve para que las palabras largas que podamos alojar en un parrafo no salgan de su caja o margen encuadrado, de esta manera el metodo cortara la palabra para ser mostrada debajo. Como el programa no sabe si esta bien cortala en donde sea, podemos ponerles las banderillas <wbr> a la palabra larga en cuestion para que la corte asi en silabas por ej unicamente, como veremos en este ejercisio. --> 
+
+
+<html>
+	
+	<head>
+		<style type="text/css">
+
+				p {
+
+					 width: 100px;
+					 border: 1px solid black;
+					 word-wrap: break-word; /* Este metodo es el que permite que el parrafo quede dentro de la caja. Mas abajo vemos como usamos el comando <wbr> para trozar una palabra que sabemos que podria cortarse por su largura, entonces de antemano podremos en donde cortarse si fuese necesario. */
+
+				   } 
+
+		</style>
+
+	</head>
+
+
+
+	<body>	
+
+		<p>Esta seria la palabra super larga del texto super<wbr>cali<wbr>fragi<wbr>listico<wbr>espia<wbr>lidoso. Repetimos la frase, esta seria la palabra supèr larga, esta seria la palabra super larga. </p>
+
+	</body>
+
+</html>

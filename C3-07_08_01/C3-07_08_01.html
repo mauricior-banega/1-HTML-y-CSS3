@@ -1,0 +1,52 @@
+<!-- HTML y CSS3 - Capitulo 3 (Video 18): 07_08_01- Columnas: Creamos columnas en un articulo o parrafo (cualquiera, este se llama Korem ipsum nose cuanto) y le diremos con que contenga 3 columnas para el ej, pero le podemos poner las que queramos. Para ello tenemos que crear una div class llamada articulo, que llamaremos desde un style a la clase .articulo para ponerle a ella las columnas. Centraremos los titulos tambien; de esta manera tendremos una sencilla maquetacion de revista con formato clasico en columnas en CSS3. Copiaremos este mismo ejercicio ya que sigue pero con agregados en Capitulo 4 (Video 1): C4-07-08-02.  --> 
+
+
+
+<html>
+
+
+
+	<head>
+
+		<style type="text/css">
+			
+			h1 
+			{
+				text-align: center; /* Asi alineamos/centramos el h1 (Titulo del articulo) */
+			}
+
+
+			h2 
+			{
+				text-align: center; /* Asi alineamos/centramos el h2 (Subtitulo)  */
+			}
+
+			.articulo /*Aca le ponemos las columnas al div de la clase "articulo", con el metodo column-count:; y sus respectivas compatibilidades. */
+			{
+				column-count:4;
+				-moz-column-count:4;
+				-webkit-column-count:4;
+				-o-column-count:4;
+			}
+
+
+		</style>
+
+	</head>
+
+
+	<body>
+		<h1>Titulo del Articulo</h1>
+		<h2>Subtitulo</h2>
+		
+		<div class="articulo">
+
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor rhoncus dolor purus non. Sodales neque sodales ut etiam sit. Eget duis at tellus at urna condimentum. Integer vitae justo eget magna fermentum iaculis eu non. Vulputate eu scelerisque felis imperdiet. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. Consectetur purus ut faucibus pulvinar elementum integer enim neque. Ullamcorper malesuada proin libero nunc consequat interdum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique senectus. Sit amet dictum sit amet justo donec enim diam vulputate. Lorem ipsum dolor sit amet consectetur adipiscing elit duis. Pellentesque dignissim enim sit amet.
+
+
+		</div>
+	</body>
+
+
+
+</html>

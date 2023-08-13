@@ -1,0 +1,3 @@
+-Se avanza muchisimo casi un %90 del practico quedando asi a modo de practica terminar los enlaces a las otras paginas a las que se pueden acceder desde la pagina creada, como lo es Noticias, Contacto etc.
+
+-Pero se eloge por el momento avanzar con la siguiente unidad de CSS3 Practicos Avanzados para afianzar aun mas los conocimientos ya vistos y recien alli poder terminar completamente a este.

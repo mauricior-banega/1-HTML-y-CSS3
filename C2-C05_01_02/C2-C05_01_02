@@ -1,0 +1,66 @@
+<!-- HTML y CSS3 - Capitulo 2 (Video 5): 05_01_02 - Lineas: dibujaremos en Canvas, haremos un "HOLA" mediante coordenadas de posicionamiento y trazado de Lineas. --> 
+
+
+<html>
+	<body>
+
+		<canvas id="hola"  width="130px" height="100px" style="border:1px solid black;">  <!-- Idem al ejercisio anterior, usaremos la etiqueta canvas, creamos un id que le llamaremos hola, en el crearemos los 																							parametros del rectangulo (alto/ancho/borde/estilo/color). --> 
+			Tu navegador no soporta Canvas
+
+		</canvas>
+
+
+		<!-- Ahora crearemos la etiqueta script, donde crearemos dibujaremos dentro del rectangulo creado--> 
+
+
+		<script>    
+
+			var c=document.getElementById("hola");         <!-- Indicamos que el dibujo se realize dentro del cuadrado o dobujo creado hola.--> 
+			var cxt=c.getContext("2d");                    <!-- Indicamos que el dibujo sea en 2 dimenciones.--> 
+
+
+			
+			cxt.moveTo (10,10);                            <!-- Inicializamos un punto en el dibujo que sera invisible pero desde el que podremos empezar a trazar las lineas para escribir la H de HOLA. --> 
+			cxt.lineTo (10,90);							   <!-- Primer trazado, desde el punto del moveTo una linea recta hacia abajo, creando una vertical que va desde el punto 10 al 90. --> 
+			cxt.lineTo (10,50);							   <!-- En este punto, haremos una linea que vuelve por el mismo camino y ligeramente el sobre trazado. Esto se hace para volver a posicionarnos al medio de la 													H y seguir dibujando la linea del medio. -->
+			cxt.lineTo (30,50);	
+			cxt.lineTo (30,10);	
+			cxt.lineTo (30,90);	
+
+
+
+			cxt.moveTo (40,10);                            <!-- Inicializamos un punto en el dibujo que sera invisible para la O de HOLA, desde ahi dibujamos.--> 
+			cxt.lineTo (40,90);							   
+			cxt.lineTo (60,90);	
+			cxt.lineTo (60,10);	
+			cxt.lineTo (40,10);	
+				
+
+
+			cxt.moveTo (70,10);                            <!-- Inicializamos un punto en el dibujo que sera invisible para la L de HOLA, desde ahi dibujamos.--> 
+			cxt.lineTo (70,90);							    
+			cxt.lineTo (90,90);	
+
+
+			
+			cxt.moveTo (100,90);                            <!-- Inicializamos un punto en el dibujo que sera invisible para la A de HOLA, desde ahi dibujamos.--> 
+			cxt.lineTo (100,10);							   
+			cxt.lineTo (120,10);	
+			cxt.lineTo (120,90);	
+			cxt.lineTo (120,50);	
+			cxt.lineTo (100,50);
+
+
+			cxt.stroke();									<!-- Sin este parametro "stroke" no dibuja ninguno de las lineas --> 
+
+					   
+		</script>
+
+
+		<!-- ?NOTA: Lo que dibujamos queda guardado como una imagen en mapa de bits (la que creamos bajo el id canvas), que puede ser descargado/guardado desde el mismo navegador. --> 
+
+
+
+
+	</body>
+</html>
